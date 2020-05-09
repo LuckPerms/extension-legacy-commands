@@ -1,0 +1,6 @@
+name: luckperms-extension-legacy-commands
+version: 1.0.0
+main: me.lucko.luckperms.extension.legacycommands.LegacyCommandsExtension
+api-version: 1.13
+depend: [LuckPerms]
+authors: [Luck]

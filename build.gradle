@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'me.lucko.luckperms'
+version '1.0.0'
+
+archivesBaseName = 'luckperms-extension-legacy-commands'
+
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+}
+
+dependencies {
+    compileOnly 'org.bukkit:bukkit:1.15.2-R0.1-SNAPSHOT'
+}
