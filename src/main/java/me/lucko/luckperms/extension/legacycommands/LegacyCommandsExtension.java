@@ -17,10 +17,10 @@ public class LegacyCommandsExtension extends JavaPlugin implements CommandExecut
 
     @Override
     public void onEnable() {
-        PluginCommand luckPermsCommand = getServer().getPluginCommand("luckperms");
-        Objects.requireNonNull(luckPermsCommand, "luckPermsCommand");
-        this.executor = luckPermsCommand.getExecutor();
-        luckPermsCommand.setExecutor(this);
+        this.luckPermsCommand = getServer().getPluginCommand("luckperms");
+        Objects.requireNonNull(this.luckPermsCommand, "luckPermsCommand");
+        this.executor = this.luckPermsCommand.getExecutor();
+        this.luckPermsCommand.setExecutor(this);
     }
 
     @Override
